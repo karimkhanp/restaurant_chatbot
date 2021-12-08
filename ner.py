@@ -51,6 +51,7 @@ class RestoBot(object):
         tokenized_text = word_tokenize(text)
         classified_text = st.tag(tokenized_text)
         all_location = []
+        print("All Entities : ",classified_text )
         for val in classified_text:
             if list(val)[1] == 'LOCATION':
                 all_location.append(list(val)[0])
